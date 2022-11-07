@@ -2,6 +2,7 @@ from pdfminer.high_level import extract_text
 import re
 import nltk
 nltk.download('stopwords')
+nltk.download('omw-1.4')
 nltk.download('wordnet')
 from nltk.stem import WordNetLemmatizer
 from textblob import TextBlob
