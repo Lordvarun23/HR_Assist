@@ -4,6 +4,7 @@ import nltk
 from nltk.stem import WordNetLemmatizer
 from textblob import TextBlob
 import spacy
+from spacy_download import load_spacy
 
 
 def extract_text_from_pdf(pdf_path):
@@ -35,7 +36,7 @@ def preprocess(text):
     text = str(TextBlob(text))
 
     # Tokenisation
-    nlp = spacy.load('en_core_web_sm')
+    nlp = load_spacy("en_core_web_sm", exclude=["parser", "tagger"])
     tokens = nlp(text)
     text = []
     for i in tokens:
