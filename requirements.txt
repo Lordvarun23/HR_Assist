@@ -10,4 +10,3 @@ gensim
 numpy
 transformers
 torch
-python -m spacy download en
