@@ -1,6 +1,7 @@
 from pdfminer.high_level import extract_text
 import re
 import nltk
+nltk.download('stopwords')
 from nltk.stem import WordNetLemmatizer
 from textblob import TextBlob
 import spacy
